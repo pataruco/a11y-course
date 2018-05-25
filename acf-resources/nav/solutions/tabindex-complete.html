@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <meta charset=utf-8>
+  <title>Tabindex solution</title>
+  <style>
+
+/* This styling is really just to make it easier to see where the focus
+ * is going. */
+
+body {
+  font-size: 24px;
+}
+
+input {
+  border: 2px solid #aaa;
+  width: 10em;
+  margin: 1ex;
+  padding: 1ex;
+}
+
+input:focus {
+  background: #fdd;
+  border-color: #000;
+}
+
+  </style>
+ </head>
+ <body>
+
+<form>
+  <table>
+    <tr>
+      <td><input type=text name=1 value=r1c1 tabindex=70></td>
+      <td><input type=text name=2 value=r1c2 tabindex=80></td>
+      <td><input type=text name=3 value=r1c3 tabindex=90></td>
+    </tr>
+    <tr>
+      <td><input type=text name=4 value=r2c1 tabindex=40></td>
+      <td><input type=text name=5 value=r2c2 tabindex=50></td>
+      <td><input type=text name=6 value=r2c3 tabindex=60></td>
+    </tr>
+    <tr>
+      <td><input type=text name=7 value=r3c1 tabindex=10></td>
+      <td><input type=text name=8 value=r3c2 tabindex=20></td>
+      <td><input type=text name=9 value=r3c3 tabindex=30></td>
+    </tr>
+  </table>
+</form>
+
+ </body>
+</html>

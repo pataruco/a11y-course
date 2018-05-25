@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <meta charset=utf-8>
+  <title>Table structure solution 3</title>
+  <style>
+
+body {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border-color: black;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  padding: 1ex;
+}
+th {
+  border-width: 2px;
+  background: #ddd;
+}
+caption { padding-bottom: 1.5ex; }
+
+  </style>
+ </head>
+ <body>
+
+<table>
+  <caption>Sales for January to March 2013</caption>
+
+  <colgroup><col>
+  <colgroup><col>
+  <colgroup><col><col>
+  <colgroup><col><col>
+
+  <thead>
+    <tr>
+     <th rowspan=2 id=client>Client
+     <th colspan=2 id=sales>Sales
+     <th colspan=2 id=profit>Profit
+     <th rowspan=2 id=month>Month
+    </tr>
+    <tr>
+     <th id=sales_orders headers=sales># Orders
+     <th id=sales_units headers=sales># Units
+     <th id=prof_tot headers=profit>Total
+     <th id=prof_perc headers=profit>% of Revenue
+    </tr>
+  </thead>
+
+  <tbody>
+   <tr>
+    <th id=bar headers=jan>BAR
+    <td headers="bar sales_orders">3
+    <td headers="bar sales_units">27
+    <td headers="bar prof_tot">£1,234
+    <td headers="bar prof_perc">5.3%
+    <th rowspan=3 id=jan>January
+   </tr>
+   <tr>
+    <th id=foo headers=jan>FOO
+    <td headers="foo sales_orders">1
+    <td headers="foo sales_units">3
+    <td headers="foo prof_tot">£236
+    <td headers="foo prof_perc">4.6%
+   </tr>
+   <tr>
+    <th id=xyz headers=jan>XYZ
+    <td headers="xyz sales_orders">2
+    <td headers="xyz sales_units">14
+    <td headers="xyz prof_tot">£984
+    <td headers="xyz prof_perc">4.9%
+   </tr>
+  </tbody>
+
+  <tbody>
+   <tr>
+    <th>BAR <td>5 <td>75 <td>£2,274 <td>5.5%
+    <th rowspan=3>February
+   </tr>
+   <tr><th>FOO <td>3 <td>19 <td>£874 <td>4.7%</tr>
+   <tr><th>XYZ <td>1 <td>7 <td>£342 <td>5.1%</tr>
+  </tbody>
+
+  <tbody>
+   <tr>
+    <th>BAR <td>2 <td>7 <td>£453 <td>4.7%
+    <th rowspan=3>March
+   </tr>
+   <tr><th>FOO <td>2 <td>8 <td>£985 <td>5.1%</tr>
+   <tr><th>XYZ <td>4 <td>24 <td>£2,323 <td>4.8%</tr>
+  </tbody>
+</table>
+
+ </body>
+</html>

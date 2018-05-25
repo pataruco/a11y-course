@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <meta charset=utf-8>
+  <title>Links</title>
+  <style>
+
+header {
+  background-color: #fef;
+}
+
+.skiplink {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+nav {
+  width: 20%;
+  float: left;
+  background-color: #fee;
+}
+
+article {
+  width: 80%;
+  float: right;
+  background-color: #efe;
+}
+
+footer {
+  clear: both;
+  background-color: #eef;
+}
+
+  </style>
+ </head>
+ <body>
+
+<header>
+  <h1>News Site</h1>
+  <a class=skiplink href="#story">skip to story</a>
+</header>
+
+<main>
+  <nav>
+    <ul>
+      <li><a href="business-section.html" title="Latest business stories"
+       >Business</a></li>
+      <li><a href="sports-section.html" title="Latest sports stories"
+       >Sport</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+  </nav>
+
+  <article id=story>
+    <p>Author: <a href="daves-articles.html"
+     title="More articles by Dave Fisher">Dave Fisher</a></p>
+
+    <h2>Story Title</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat.</p>
+
+    <p>This story is related to <a href="last-weeks-article.html">the thing
+     which happened last week</a>.</p>
+
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     proident, sunt in culpa qui officia deserunt mollit anim id est
+     laborum.</p>
+  </article>
+</main>
+
+<footer>
+  <p><small>&copy; Copyright
+   <a href="company.html">News Company Ltd</a></small></p>
+</footer>
+
+ </body>
+</html>

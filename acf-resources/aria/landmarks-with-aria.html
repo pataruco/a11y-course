@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <meta charset=utf-8>
+  <title>Landmarks Example Page: With Roles</title>
+  <style>
+    header, nav, main, footer {
+        background-color: #eee;
+        margin: 5px;
+        padding: 1em 0;
+    }
+    p {
+        padding: 0 1em;
+    }
+
+    nav {
+        float: left;
+        width: 30%;
+    }
+    main {
+        float: right;
+        width: 64%;
+    }
+
+    footer {
+        clear: both;
+    }
+    footer p:first-child {
+        float: right;
+        text-align: right;
+        width: 45%;
+    }
+    footer p:last-child {
+        float: left;
+        width: 45%;
+    }
+    footer:after {
+        content: ".";
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+  </style>
+ </head>
+ <body>
+
+  <header role=banner>
+   <h1>Landmarks Example Page: With Roles</h1>
+  </header>
+
+  <nav role=navigation>
+   <ul>
+    <li><a href=#>About Us</a></li>
+    <li><a href=#>Option 1</a></li>
+    <li><a href=#>Option 2</a></li>
+    <li><a href=#>Option 3</a></li>
+    <li><a href=#>Other links</a></li>
+   </ul>
+  </nav>
+
+  <main role=main>
+   <p>Lorem ipsum dolor sit amet, consectetur <i>adipisicing</i> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <b>exercitation ullamco</b> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur <b><i>sint occaecat</i></b> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+   <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+  </main>
+
+  <footer role=contentinfo>
+   <p><a href=#>Contact Us</a></p>
+   <p><small>&copy; Copyright Web Training Courses Limited</small></p>
+  </footer>
+
+ </body>
+</html>

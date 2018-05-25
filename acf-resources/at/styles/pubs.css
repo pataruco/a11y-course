@@ -1,0 +1,212 @@
+/* 
+ Resets and normalisation
+*/
+ul, ol, dl, dt, dd, li, figure, aside {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+article ol, article ul {
+  margin: 1.25em 0;
+  padding: 0 0 0 2.5em; }
+
+article ol li {
+  list-style-type: decimal; }
+
+article ul li {
+  list-style-type: disc; }
+
+/* Border-box sizing for block containers */
+div, main, aside, article, section, nav li, nav a {
+  box-sizing: border-box; }
+
+/* 
+ Global, whole-body, styles 
+*/
+body {
+  font-size: 16px;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 1.25em;
+  /* 20px gridlines */
+  margin: 0 1.25%;
+  /* 4px gutters L+R */ }
+
+/* 
+ Major page divisions 
+*/
+#masthead {
+  height: 10em;
+  background-image: url(../images/leeds-skyline.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%; }
+
+nav {
+  clear: both; }
+
+nav a {
+  display: block;
+  margin: 0;
+  font-size: 1.25em;
+  /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 1.8;
+  /* 36px */
+  margin: 0.2em 0;
+  /* 4px  */
+  margin: 0.25rem 0;
+  /* 4px  */
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px; }
+  nav a:link, nav a:visited, nav a:hover, nav a a:active {
+    color: #ffe; }
+
+nav ul li:first-child a {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+nav ul li:last-child a {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+footer {
+  clear: both;
+  border-top: solid 1px #BA063F;
+  /* Uses 1x of the spare 4px at bottom of nav */
+  margin-top: 1.4375em;
+  /* 23px, using remaining spare 3px at nav bottom */
+  text-align: center; }
+
+footer p {
+  margin: 0 0 0 0;
+  /* prevent para margins sticking out of footer */
+  line-height: 2.5;
+  /* 20px */ }
+
+/* 
+ Default element styles 
+*/
+h1 {
+  font-size: 2em;
+  /* 32px */
+  line-height: 1.25em;
+  /* 40px */
+  padding: 0;
+  margin: 0.625em 0;
+  /* 20px */ }
+
+h2 {
+  font-size: 1.5em;
+  /* 24px */
+  line-height: 1.66666666em;
+  /* 40px */
+  padding: 0;
+  margin: 0.833333333em 0;
+  /* 20px */ }
+
+aside h2 {
+  text-align: center;
+  /* balances aside boxes in their rows */ }
+
+p {
+  margin: 1.25em 0; }
+
+figure {
+  height: 11.25em;
+  /* 180px = 9 gridlines */
+  overflow: hidden;
+  /* crop excess height down to 9 gridlines */ }
+
+img {
+  max-width: 100%;
+  /* shrink/expand to figure width */ }
+
+/* 
+ Link styles
+*/
+a:link {
+  color: #BA063F;
+  text-decoration: none; }
+
+a:visited {
+  color: #ba5d7b; }
+
+a:hover, a:focus {
+  text-decoration: underline; }
+
+a:active {
+  text-shadow: 2px 2px rgba(186, 6, 63, 0.3); }
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 5.078125%;
+    /* 39px margins + 690px body content */ }
+
+  nav {
+    position: absolute;
+    top: 1.25em;
+    /* 20px, one grid line at top of page */
+    top: 1.25rem;
+    /* 20px, one grid line at top of page */
+    left: 5.078125%;
+    /* 39px */
+    right: 5.078125%;
+    /* 39px */ }
+
+  nav li {
+    float: left;
+    margin-right: 1.15942028985507246%;
+    /* 8px each = 40px, + 650 content = 690 */
+    width: 15.7004830917874396%;
+    /* 1/6th of 650px + 5x8px margins = 690   */ }
+
+  nav a {
+    display: block;
+    margin: 0;
+    /* bottom 4px margin no longer needed */
+    line-height: 2;
+    /* add 4px to replace removed bottom margins */ }
+
+  /* remove excess right margin on last tab */
+  nav li:last-child {
+    margin-right: 0; }
+
+  /* stack asides horizontally in rows of 2 */
+  aside {
+    float: left;
+    width: 48.9583333333333333%; }
+
+  /* Strip last right margin in 2-float rows, and use 'clear' to start
+   * each second pub off on a new row. */
+  aside:nth-of-type(odd) {
+    margin-right: 2.0833333333333334%;
+    clear: left; }
+
+  /* stop first child top margin adding 1 gridline inside floats */
+  aside :first-child {
+    margin-top: 0; } }
+@media screen and (min-width: 960px) {
+  /* reset odd margins to allow subsequent override */
+  aside:nth-of-type(odd) {
+    margin-right: 0;
+    margin-right: 2.5%; }
+
+  /* Fit 3 items in the float rows */
+  aside {
+    width: 31.666666666666666%;
+    margin-right: 2.5%; }
+
+  /* Strip excess right margin from 3rd float in each row */
+  aside:nth-of-type(3n) {
+    margin-right: 0; }
+
+  /* Start each third pub on a new row, and override the two-per-row clearing
+     from above. */
+  aside:nth-of-type(odd) {
+    clear: none; }
+
+  aside:nth-of-type(3n+1) {
+    clear: left; } }

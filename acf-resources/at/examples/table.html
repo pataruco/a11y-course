@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+   <meta charset=utf-8>
+   <meta name=viewport content="width=device-width,initial-scale=1.0">
+   <title>Beers in Whitelocks</title>
+   <link rel=stylesheet type="text/css" href="../styles/pubs.css">
+   <style>
+    table {
+      caption-side: bottom;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    caption {
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+    td, th {
+      border: solid 1px black;
+      padding: 0.625em 0.5em;
+    }
+    tr :first-child {
+      text-align: left;
+    }
+    tr :nth-child(3), tr :nth-child(4) {
+      text-align: center;
+    }
+    thead {
+      background-color: lightgrey;
+    }
+   </style>
+  </head>
+  <body>
+    <header id=masthead></header>
+
+    <form action="http://www.google.com/search" method=get style="float:right">
+     <input type=search name=q placeholder="Search the web">
+    </form>
+
+    <main>
+      <article>
+
+        <header>
+          <h1>Beers in Whitelocks</h1>
+        </header>
+
+        <p>Below you'll find a table of several beers, with information
+          about their alcoholic strength and price.</p>
+
+        <table>
+          <caption>Table of Beers on sale in Whitelock's</caption>
+          <thead>
+            <tr>
+              <th>Beer name</th>
+              <th>Description</th>
+              <th>A.B.V.</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Badger Beer</th>
+              <td>Heavy, brown, rough</td>
+              <td>5.5%</td>
+              <td>£3.50</td>
+            </tr>
+            <tr>
+              <th>Foxy Beer</th>
+              <td>Light, blonde, hoppy</td>
+              <td>3.2%</td>
+              <td>£3.05</td>
+            </tr>
+            <tr>
+              <th>Old Peculier</th>
+              <td>Thick dark beer, smooth and quite sweet</td>
+              <td>5.6%</td>
+              <td>£3.70</td>
+            </tr>
+            <tr>
+              <th>Landlord</th>
+              <td>Light and refreshing bitter from Timothy Taylor</td>
+              <td>4.3%</td>
+              <td>£3.10</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </article>
+    </main>
+
+    <nav>
+      <ul>
+        <li><a href="details/whitelocks.html" class="tab" id="whitelocks-tab">Whitelocks</a></li>
+        <li><a href="details/packhorse.html" class="tab" id="packhorse-tab">Packhorse</a></li>
+        <li><a href="details/angel.html" class="tab" id="angel-tab">Angel</a></li>
+        <li><a href="details/victoria.html" class="tab" id="victoria-tab">Vic</a></li>
+        <li><a href="details/trumpet.html" class="tab" id="trumpet-tab">Trumpet</a></li>
+        <li><a href="details/scarbrough.html" class="tab" id="scarbrough-tab">Scarbrough</a></li>
+      </ul>
+    </nav>
+
+    <footer>
+      <p>&copy; MyCorp Plc</p>
+    </footer>
+  </body>
+</html>

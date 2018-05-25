@@ -18,3 +18,7 @@
 * `itemscope` `itemtype` from [Schema.org](http://schema.org/) give microdata content to assistance technologies interfaces
 * [pa11y](https://github.com/pa11y/pa11y) a good CLI tool for a11y automated test
 * [Wave](http://wave.webaim.org/) is still well used
+
+## Day 2
+
+* Use [pa11y](https://github.com/pa11y/pa11y) conformance report
