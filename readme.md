@@ -58,3 +58,15 @@
 * Is suggested to start use `title` on every `<a>`
 * Don't use `accesskey` because override keyboard shortcuts mapping of SR
   * If your are force to use `accesskey` notify the user using HTML `<kbd>` elements
+* If you are using `<table>` use `<caption>`
+* Use `<progress>` if your form is long or is splitted in many pages
+* Research `<fieldset>` and `<legend>`
+* Use `title` on `<input>` to add more context and fallback for disable use
+* Always use
+  * ```html
+    <input type="submit">
+    ```
+  * Never
+    * ```html
+      <button>
+      ```
