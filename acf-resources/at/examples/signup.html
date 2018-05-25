@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang=en-GB>
+ <head>
+  <meta charset=utf-8>
+  <title>Newsletter signup</title>
+ </head>
+ <body>
+  <h1>Newsletter signup</h1>
+  <p id=results>
+   Waiting for JavaScript to display results…<br>
+   This page is designed to be the ‘action’ part of the example
+    newsletter signup form, and will display the results.
+  </p>
+
+  <script>
+    "use strict";
+    // This JavaScript code will retrieve the values submitted by the form,
+    // from the ‘query’ part of the URL, and display them in the body of
+    // the page above.
+
+    function get_url_parameter (name) {
+        var re = RegExp("\\b" + name + "=(.*?)(?:&|$)");
+        var match = re.exec(location.search);
+        if (match)
+            return decodeURIComponent(match[1].replace(/\+/g, " "));
+        else
+            return null;
+    }
+
+    function escape_html (str) {
+        return str.replace(/&/g, "&amp;")
+                  .replace(/</g, "&lt;")
+                  .replace(/"/g, "&quot;");
+    }
+
+    var blurb;
+    if (!/email=/.test(location.search))
+        blurb = null;
+    else if (/agreed=on/.test(location.search)) {
+        var title = get_url_parameter("title");
+        title = title === "mr"   ? "Mr."
+              : title === "mrs"  ? "Mrs."
+              : title === "miss" ? "Miss."
+              : title === "ms"   ? "Ms."
+                                 : "";
+        var name = get_url_parameter("name");
+        if (name)
+            name = escape_html(name)
+        else
+            name = "Anonymous";
+
+        blurb = "Congratulations, " + title + " " + name +
+                ", you have now been signed up to our newsletter with the" +
+                " email address " + escape_html(get_url_parameter("email")) +
+                ".";
+        if (get_url_parameter("offers"))
+            blurb += "<br>You have elected to receive information about" +
+                     " special offers.";
+
+    }
+    else
+        blurb = "We cannot sign you up to our newsletter unless you agree" +
+                " to the terms and conditions.  Please return to the signup" +
+                " form and try again.";
+
+    if (blurb)
+        document.getElementById("results").innerHTML = blurb;
+  </script>
+ </body>
+</html>
+

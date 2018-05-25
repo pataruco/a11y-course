@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+   <meta charset=utf-8>
+   <meta name=viewport content="width=device-width,initial-scale=1.0">
+   <title>Sign up for Newsletter</title>
+   <link rel=stylesheet type="text/css" href="../styles/pubs.css">
+   <style>
+    label, .control {
+      float: left;
+    }
+    .about label {
+      font-weight: bold;
+      width: 12em;
+    }
+    .about label, .choices .control {
+      clear: left;
+    }
+    .submit {
+      display: block;
+      padding: 1em 2em;
+    }
+    fieldset {
+      margin-bottom: 1em;
+      max-width: 30em;
+    }
+    fieldset legend {
+      font-style: italic;
+    }
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+   </style>
+  </head>
+  <body>
+    <header id=masthead></header>
+
+    <form action="http://www.google.com/search" method=get style="float:right">
+     <input type=search name=q placeholder="Search the web">
+    </form>
+
+    <main>
+      <article>
+
+        <header>
+          <h1>Sign up for Newsletter</h1>
+        </header>
+
+        <p>Use this form to sign up for our free email newsletter.</p>
+
+        <form action="signup.html" method=get>
+
+          <fieldset class="clearfix about">
+            <legend>About you</legend>
+            <label for=title>Your title:</label>
+            <div class=control>
+              <select id=title name=title>
+                <option value="">(please select)</option>
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="miss">Miss.</option>
+                <option value="ms">Ms.</option>
+              </select>
+            </div>
+            <label for=name>Your name:</label>
+            <div class=control><input type=text id=name name=name></div>
+            <label for=email>Your email address:</label>
+            <div class=control><input type=email id=email name=email required></div>
+          </fieldset>
+
+          <fieldset class="clearfix choices">
+            <legend>Choices</legend>
+            <div class=control><label><input type=checkbox name=agreed>
+                Do you agree to our terms and conditions?</label></div>
+            <div class=control><label><input type=checkbox name=offers>
+                Do you want to know about special offers?</label></div>
+          </fieldset>
+
+          <input class=submit type=submit value="Sign up now!">
+        </form>
+
+      </article>
+    </main>
+
+    <nav>
+      <ul>
+        <li><a href="details/whitelocks.html" class="tab" id="whitelocks-tab">Whitelocks</a></li>
+        <li><a href="details/packhorse.html" class="tab" id="packhorse-tab">Packhorse</a></li>
+        <li><a href="details/angel.html" class="tab" id="angel-tab">Angel</a></li>
+        <li><a href="details/victoria.html" class="tab" id="victoria-tab">Vic</a></li>
+        <li><a href="details/trumpet.html" class="tab" id="trumpet-tab">Trumpet</a></li>
+        <li><a href="details/scarbrough.html" class="tab" id="scarbrough-tab">Scarbrough</a></li>
+      </ul>
+    </nav>
+
+    <footer>
+      <p>&copy; MyCorp Plc</p>
+    </footer>
+  </body>
+</html>
