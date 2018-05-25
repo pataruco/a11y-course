@@ -5,7 +5,7 @@
 * Web (wrongly) is treated as graphic medium
 * Design always from the lowest denomination group
 * `display:none` disable sounds
-* Use text browsers to test a11y ([lynx](<https://en.wikipedia.org/wiki/Lynx_(web_browser)>))
+* Use text browsers to test a11y ([lynx](<https://en.wikipedia.org/wiki/Lynx_(web_browser)>)) ([download](http://brewformulas.org/Lynx))
 * Colour blindness is the less considered kind of disability
   * if your design works in monochrome it's accessible
 * Always support keyboard interface
@@ -28,11 +28,11 @@
 * `role=alert` is always used an `assertive` instead a `polite` `aria-live`
 * `role=alertdialog` must have `aria-labelledby` or `aria-label`
   * Must be a modal to break the flow of the SR.
-* Using [Aria](https://w3c.github.io/using-aria/)
-* if you use a `<canvas>` use `role=application`
+* Using [Aria](https://w3c.github.io/using-aria/) official manual
+* If you use a `<canvas>` use `role=application`
 * To use `tabindex` is ok, but if you found using it, first think to change the source order of your HTML
   * the same of above with `accesskey`
-* The MOST import thing to help navigation on single page is to have correct hierachy order on titles (`h1` to `h6`)
+* The most import thing to help navigation on single page is to have correct hierachy order on titles (`h1` to `h6`)
 * Provide as many _HTML phrases_ as you can, e.g `em`, `strong`, `abbr`, `cite`, `blockquote`, `q`
 * If you are using `em`, `strong` the SR is shouting to blind people.
 * Never use HTML for styling purposes, e.g. use a `h3` to create a blockquote
@@ -50,6 +50,11 @@
 * Never require hovering to make links or actions visible
 * If an image is not meaningful to explain the content, use the image as CSS `background-image` insted to HTML `img`
 * `alt` describe function `title`describe content
-* Use `alt` as fallback if image is not rendering
 * is valid to have empty `alt` attributes if the information is redundant
 * `title` also conveys to be supplemantary information
+* Research about the of `<figure>` as default wrapper for `<img>`
+* Research about the use `<figure>` vs `<picture>` vs `<object>`
+* If you using `href=mailto` is important to set a `title` attribute to warn a screen users
+* Is suggested to start use `title` on every `<a>`
+* Don't use `accesskey` because override keyboard shortcuts mapping of SR
+  * If your are force to use `accesskey` notify the user using HTML `<kbd>` elements
