@@ -1,4 +1,4 @@
-# Web Accessbility course
+# Web Accessibility course
 
 ## Day 1
 
@@ -11,10 +11,10 @@
 * Always support keyboard interface
 * Redundancy on techniques is key
 * Think about people with mild disabilities (elderly people)
-* If you cannot navigate a website on text browser (lynx) is quite possible taht is not accessible
+* If you cannot navigate a website on text browser (lynx) is quite possible that is not accessible
 * Just make the code accessible for a screen reader, because it's impossible to give support to all assistance technologies
 * The input of a screen reader is the output of every browser, so the experience is different per browser
-* Enable JS form filling, but always set a fallback with vanilla HTML and server side validation
+* Enable JS form filling, but always set a fallback with vanilla HTML and server-side validation
 * `longdesc` give a URL to a description, but it's [obsolete](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-longdesc), Use `aria-describedby` or `aria-details`.
 * `itemscope` `itemtype` from [Schema.org](http://schema.org/) give microdata content to assistance technologies interfaces
 * [pa11y](https://github.com/pa11y/pa11y) a good CLI tool for a11y automated test
@@ -27,15 +27,15 @@
 * Use `aria-live` when we _live regions_ are on the page
 * `role=alert` is always used an `assertive` instead a `polite` `aria-live`
 * `role=alertdialog` must have `aria-labelledby` or `aria-label`
-  * Must be a modal to break the flow of the SR.
+  * Must be modal to break the flow of the SR.
 * Using [Aria](https://w3c.github.io/using-aria/) official manual
 * If you use a `<canvas>` use `role=application`
 * To use `tabindex` is ok, but if you found using it, first think to change the source order of your HTML
   * the same of above with `accesskey`
-* The most import thing to help navigation on single page is to have correct hierachy order on titles (`h1` to `h6`)
+* The most import thing to help navigation on a single page is to have correct hierarchy order on titles (`h1` to `h6`)
 * Provide as many _HTML phrases_ as you can, e.g `em`, `strong`, `abbr`, `cite`, `blockquote`, `q`
 * If you are using `em`, `strong` the SR is shouting to blind people.
-* Never use HTML for styling purposes, e.g. use a `h3` to create a blockquote
+* Never use HTML for styling purposes, e.g. use an `h3` to create a blockquote
 * Don't stop the user to increase font sizes, so always use
   * ```css
     html {
@@ -57,4 +57,4 @@
 * If you using `href=mailto` is important to set a `title` attribute to warn a screen users
 * Is suggested to start use `title` on every `<a>`
 * Don't use `accesskey` because override keyboard shortcuts mapping of SR
-  * If your are force to use `accesskey` notify the user using HTML `<kbd>` elements
+  * If you are forced to use `accesskey` notify the user using HTML `<kbd>` elements
